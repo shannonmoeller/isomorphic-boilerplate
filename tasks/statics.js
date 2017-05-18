@@ -8,7 +8,7 @@ export async function statics() {
 
 gulp.task('statics', () => {
 	if (process.env.NODE_ENV === 'development') {
-		gulp.watch('./src/client/assets/**/*.js', statics);
+		gulp.watch('./src/client/assets/**/*.*', statics);
 	}
 
 	return statics();

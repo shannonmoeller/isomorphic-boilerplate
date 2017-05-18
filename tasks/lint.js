@@ -27,7 +27,7 @@ export const lint = gulp.parallel([
 
 gulp.task('lint', async () => {
 	if (process.env.NODE_ENV === 'development') {
-		gulp.watch('./src/{client,server,shared}/**/*.js', lintScripts);
+		gulp.watch('./src/**/*.js', lintScripts);
 		gulp.watch('./src/client/**/*.css', lintStyles);
 	}
 
