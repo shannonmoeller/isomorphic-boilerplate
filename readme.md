@@ -2,17 +2,17 @@
 
 Boilerplate using babel, browserify, gulp, and tape.
 
-Production:
+Production mode:
 
 ```
-npm run build
+npm run make
 npm run start
 ```
 
-Development (in separate terminals):
+Development mode (watch files for changes, run in separate terminals):
 
 ```
-npm run build-dev
+npm run make-dev
 npm run start-dev
 ```
 

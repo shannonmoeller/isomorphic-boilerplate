@@ -4,8 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "cross-env NODE_ENV=production gulp",
-    "build-dev": "cross-env NODE_ENV=development gulp",
+    "make": "cross-env NODE_ENV=production gulp",
+    "make-dev": "cross-env NODE_ENV=development gulp",
     "start": "cross-env NODE_ENV=production node bin/www",
     "start-dev": "cross-env NODE_ENV=development nodemon --watch dist bin/www",
     "test": "cross-env NODE_ENV=test nyc gulp test"
@@ -29,6 +29,7 @@
     "blue-tape": "^1.0.0",
     "cssnano": "^3.10.0",
     "del": "^2.2.2",
+    "eslint": "^3.19.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-babel": "^6.1.2",
     "gulp-bro": "^1.0.2",
