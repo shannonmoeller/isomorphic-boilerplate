@@ -1,5 +1,8 @@
 import express from 'express';
+import { resolve } from 'path';
 import { html } from 'common-tags';
+
+const clientPath = resolve(__dirname, '../client');
 
 /**
  * @method getIndex
@@ -7,19 +10,21 @@ import { html } from 'common-tags';
  * @param {Response} response
  */
 export function getIndex(request, response) {
-	const body = html`
+	const { id } = request.params;
+
+	response.send(html`
 		<!doctype html>
 		<html>
 			<head>
-				<title>${request.params.id}</title>
+				<title>${id}</title>
+				<link rel="stylesheet" href="/styles/index.css" />
 			</head>
 			<body>
-				<p>${request.params.id}</p>
+				<p>${id}</p>
+				<script src="/scripts/index.js" />
 			</body>
 		</html>
-	`;
-
-	response.send(body.trim());
+	`);
 }
 
 /**
@@ -28,5 +33,6 @@ export function getIndex(request, response) {
  */
 export function createServer() {
 	return express()
+		.use(express.static(clientPath))
 		.get('/:id?', getIndex);
 }

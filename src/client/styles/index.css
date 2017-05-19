@@ -1,1 +1,10 @@
 @import 'reset-css/reset.css';
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font: normal 1.6rem/1.6 sans-serif;
+	padding: 3rem;
+}
