@@ -13,6 +13,7 @@ export async function lintStyles() {
 	return gulp
 		.src('./src/**/*.css')
 		.pipe(stylelint({
+			failAfterError: false,
 			reporters: [{
 				formatter: 'string',
 				console: true,
