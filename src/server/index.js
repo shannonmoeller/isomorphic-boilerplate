@@ -1,7 +1,17 @@
 import express from 'express';
 
 export function getIndex(request, response) {
-	response.send(request.params.id);
+	response.send(`
+		<!doctype html>
+		<html>
+			<head>
+				<title>${request.params.id}</title>
+			</head>
+			<body>
+				<p>${request.params.id}</p>
+			</body>
+		</html>
+	`);
 }
 
 export function createServer() {
