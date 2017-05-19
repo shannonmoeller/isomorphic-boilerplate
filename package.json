@@ -7,12 +7,13 @@
     "build": "cross-env NODE_ENV=production gulp",
     "build-dev": "cross-env NODE_ENV=development gulp",
     "start": "cross-env NODE_ENV=production node bin/www",
-    "start-dev": "cross-env NODE_ENV=development nodemon -w dest bin/www",
+    "start-dev": "cross-env NODE_ENV=development nodemon --watch dist bin/www",
     "test": "cross-env NODE_ENV=test nyc gulp test"
   },
   "dependencies": {
     "@webcomponents/custom-elements": "^1.0.0",
     "babel-runtime": "^6.23.0",
+    "common-tags": "^1.4.0",
     "cross-env": "^5.0.0",
     "dom4": "^1.8.3",
     "dotenv": "^4.0.0",

@@ -8,12 +8,12 @@ test('should get foo', async (t) => {
 	const response = await http.get('/foo');
 
 	t.equal(response.status, 200);
-	t.ok((/foo/).test(response.text));
+	t.ok((/html[^]+foo/).test(response.text));
 });
 
 test('should get bar', async (t) => {
 	const response = await http.get('/bar');
 
 	t.equal(response.status, 200);
-	t.ok((/bar/).test(response.text));
+	t.ok((/html[^]+bar/).test(response.text));
 });

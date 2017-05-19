@@ -1,7 +1,13 @@
 import express from 'express';
+import { html } from 'common-tags';
 
+/**
+ * @method getIndex
+ * @param {Request} request
+ * @param {Response} response
+ */
 export function getIndex(request, response) {
-	response.send(`
+	const body = html`
 		<!doctype html>
 		<html>
 			<head>
@@ -11,9 +17,15 @@ export function getIndex(request, response) {
 				<p>${request.params.id}</p>
 			</body>
 		</html>
-	`);
+	`;
+
+	response.send(body.trim());
 }
 
+/**
+ * @method createServer
+ * @return {Express}
+ */
 export function createServer() {
 	return express()
 		.get('/:id?', getIndex);
