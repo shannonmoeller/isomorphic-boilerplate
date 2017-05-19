@@ -1,4 +1,6 @@
 import express from 'express';
+import compression from 'compression';
+import helmet from 'helmet';
 import { resolve } from 'path';
 import { html } from 'common-tags';
 
@@ -33,6 +35,8 @@ export function getIndex(request, response) {
  */
 export function createServer() {
 	return express()
-		.use(express.static(clientPath))
+		.use(helmet())
+		.use(compression())
+		.use(express.static(clientPath, { maxAge: '1d' }))
 		.get('/:id?', getIndex);
 }
