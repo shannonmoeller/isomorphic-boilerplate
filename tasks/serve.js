@@ -1,6 +1,8 @@
 import gulp from 'gulp';
 import nodemon from 'nodemon';
 
+import './build';
+
 export function serve() {
 	setTimeout(() => {
 		nodemon({

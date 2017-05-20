@@ -2,18 +2,29 @@
 
 Boilerplate using babel, browserify, gulp, and tape.
 
-Production mode:
+## `npm`
 
 ```
-npm run make
-npm run start
+npm install
+npm run dev serve
 ```
 
-Development mode (watch files for changes, run in separate terminals):
+## `docker-compose`
 
 ```
-npm run make-dev
-npm run start-dev
+docker-compose up
+```
+
+## `docker`
+
+```
+docker build -t boilerplate .
+docker run \
+    -p '3000:3000' \
+    -v "$PWD:/src" \
+    -v '/src/node_modules' \
+    -it boilerplate \
+    npm run dev serve
 ```
 
 ----
