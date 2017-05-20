@@ -3,7 +3,7 @@ import nodemon from 'nodemon';
 
 import './build';
 
-export function serve() {
+export function start() {
 	setTimeout(() => {
 		nodemon({
 			script: 'bin/www',
@@ -17,7 +17,7 @@ export function serve() {
 	}, 1000);
 }
 
-gulp.task('serve', gulp.series(
+gulp.task('start', gulp.series(
 	'default',
-	serve,
+	start,
 ));

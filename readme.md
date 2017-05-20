@@ -6,16 +6,39 @@ Boilerplate using babel, browserify, gulp, and tape.
 
 ```
 npm install
-npm run dev serve
+```
+
+Production:
+
+```
+npm run prod
+npm run start
+```
+
+Development:
+
+```
+npm run dev start
 ```
 
 ## `docker-compose`
+
+Development:
 
 ```
 docker-compose up
 ```
 
 ## `docker`
+
+Production:
+
+```
+docker build -t boilerplate .
+docker run -p '80:3000' boilerplate
+```
+
+Development:
 
 ```
 docker build -t boilerplate .
@@ -24,7 +47,7 @@ docker run \
     -v "$PWD:/src" \
     -v '/src/node_modules' \
     -it boilerplate \
-    npm run dev serve
+    npm run dev start
 ```
 
 ----
