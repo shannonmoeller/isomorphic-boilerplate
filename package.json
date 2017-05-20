@@ -1,13 +1,11 @@
 {
   "name": "isomorphic-boilerplate",
   "version": "1.0.0",
-  "description": "",
   "private": true,
   "scripts": {
-    "make": "cross-env NODE_ENV=production gulp",
-    "make-dev": "cross-env NODE_ENV=development gulp",
+    "dev": "cross-env NODE_ENV=development gulp",
+    "prod": "cross-env NODE_ENV=production gulp",
     "start": "cross-env NODE_ENV=production node bin/www",
-    "start-dev": "cross-env NODE_ENV=development nodemon --watch dist bin/www",
     "test": "cross-env NODE_ENV=test nyc gulp test"
   },
   "dependencies": {

@@ -144,5 +144,8 @@ module.exports = {
 		'wrap-iife': 'error',
 		'yield-star-spacing': 'error',
 		'yoda': 'error',
+
+		// Disable recommended.
+		'no-console': 'off',
 	},
 };
