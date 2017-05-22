@@ -7,4 +7,6 @@ services:
       - /src/node_modules
     ports:
       - '3000:3000'
-    command: 'npm run dev start'
+    command: >
+      npm run dev &&
+      npm run dev start

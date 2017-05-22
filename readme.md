@@ -21,24 +21,17 @@ Development:
 npm run dev start
 ```
 
-## `docker-compose`
+Visit: http://localhost:3000/foo
 
-Development:
+## `docker-compose`
 
 ```
 docker-compose up
 ```
 
+Visit: http://localhost:3000/foo
+
 ## `docker`
-
-Production:
-
-```
-docker build -t boilerplate .
-docker run -p '80:3000' boilerplate
-```
-
-Development:
 
 ```
 docker build -t boilerplate .
@@ -49,6 +42,19 @@ docker run \
     -it boilerplate \
     npm run dev start
 ```
+
+Visit: http://localhost:3000/foo
+
+## `vagrant`
+
+```
+vagrant up
+vagrant ssh
+cd /src
+npm run dev start
+```
+
+Visit: http://192.168.33.10:3000/foo
 
 ----
 
