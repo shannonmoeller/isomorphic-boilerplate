@@ -23,7 +23,7 @@ export function getIndex(request, response) {
 			</head>
 			<body>
 				<p>${safeHtml`${id}`}</p>
-				<script src="/scripts/index.js" />
+				<script src="/scripts/index.js"></script>
 			</body>
 		</html>
 	`);
