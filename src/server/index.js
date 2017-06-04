@@ -2,7 +2,7 @@ import express from 'express';
 import compression from 'compression';
 import helmet from 'helmet';
 import { resolve } from 'path';
-import { html } from 'common-tags';
+import { html, safeHtml } from 'common-tags';
 
 const clientPath = resolve(__dirname, '../client');
 
@@ -18,11 +18,11 @@ export function getIndex(request, response) {
 		<!doctype html>
 		<html>
 			<head>
-				<title>${id}</title>
+				<title>${safeHtml`${id}`}</title>
 				<link rel="stylesheet" href="/styles/index.css" />
 			</head>
 			<body>
-				<p>${id}</p>
+				<p>${safeHtml`${id}`}</p>
 				<script src="/scripts/index.js" />
 			</body>
 		</html>

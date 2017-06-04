@@ -34,7 +34,7 @@
     "cssnano": "^3.10.0",
     "del": "^2.2.2",
     "eslint": "^3.19.0",
-    "eslint-config-whim": "^2.1.0",
+    "eslint-config-whim": "^2.2.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-babel": "^6.1.2",
     "gulp-bro": "^1.0.2",
