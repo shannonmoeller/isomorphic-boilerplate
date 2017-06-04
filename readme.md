@@ -21,7 +21,7 @@ Development:
 npm run dev start
 ```
 
-Visit: http://localhost:3000/foo
+Visit: http://localhost:8080/foo
 
 ## `docker-compose`
 
@@ -29,21 +29,21 @@ Visit: http://localhost:3000/foo
 docker-compose up
 ```
 
-Visit: http://localhost:3000/foo
+Visit: http://localhost:8080/foo
 
 ## `docker`
 
 ```
 docker build -t boilerplate .
 docker run \
-    -p '3000:3000' \
+    -p '8080:8080' \
     -v "$PWD:/src" \
     -v '/src/node_modules' \
     -it boilerplate \
     npm run dev start
 ```
 
-Visit: http://localhost:3000/foo
+Visit: http://localhost:8080/foo
 
 ## `vagrant`
 
@@ -54,7 +54,7 @@ cd /src
 npm run dev start
 ```
 
-Visit: http://192.168.33.10:3000/foo
+Visit: http://192.168.33.10:8080/foo
 
 ----
 

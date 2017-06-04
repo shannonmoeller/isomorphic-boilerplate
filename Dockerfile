@@ -3,7 +3,7 @@ WORKDIR /src
 
 COPY package.json .
 RUN npm install
-
 COPY . .
-CMD npm run prod && \
-	npm run start
+
+ENV NODE_ENV production
+CMD npm run prod && npm run start

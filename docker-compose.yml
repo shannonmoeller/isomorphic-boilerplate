@@ -3,10 +3,10 @@ services:
   node:
     build: .
     volumes:
-      - ./:/src
+      - .:/src
       - /src/node_modules
     ports:
-      - '3000:3000'
-    command: >
-      npm run dev &&
-      npm run dev start
+      - '8080:8080'
+    environment:
+      - NODE_ENV=development
+    command: npm run dev start

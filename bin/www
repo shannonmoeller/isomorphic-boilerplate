@@ -1,17 +1,11 @@
 #!/usr/bin/env node
-
-// Configure environment.
 require('dotenv').config();
 
-// Setup server.
 const { createServer } = require('../dist/server/index');
 const hostname = process.env.SERVER_HOST;
 const port = Number(process.env.SERVER_PORT);
-const message = `
-	Serving: http://${hostname}:${port}/
-`;
 
-// Create server.
-createServer().listen(port, hostname, () => {
-	console.log(message);
-});
+createServer().listen(port, hostname, () => console.log(`
+	Env: ${process.env.NODE_ENV}
+	Serving: http://${hostname}:${port}
+`));

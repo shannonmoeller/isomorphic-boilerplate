@@ -1,9 +1,8 @@
 // Configure environment.
 require('dotenv').config();
 
-// Transpile on-the-fly.
-require('babel-polyfill');
-require('babel-register')({ presets: ['env'] });
+// Transpile on the fly.
+require('babel-register');
 
 // Load tasks.
 require('require-dir')('./tasks');
