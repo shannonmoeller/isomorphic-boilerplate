@@ -1,3 +1,6 @@
+import './shim/native-custom-elements';
+import '@webcomponents/custom-elements';
+
 /**
  * @method client
  * @return {String}
