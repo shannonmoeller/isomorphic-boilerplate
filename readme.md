@@ -58,6 +58,4 @@ Visit: http://192.168.33.10:8080/foo
 
 ----
 
-© Shannon Moeller <me@shannonmoeller.com> (http://shannonmoeller.com)
-
-Licensed under [MIT](http://shannonmoeller.com/mit.txt)
+MIT © [Shannon Moeller](http://shannonmoeller.com)
